@@ -31,13 +31,24 @@
             Console.WriteLine(numeros.Average()) ;
             */
 
-            string[] Frutas = { "Uva", "Pêra", "Banana", "Morango", "Melancia", "Carambola", "Abacate", "Mamão", "Abacaxi", "Cereja"};
+            string[] Frutas = { "Uva", "Pêra", "Banana", "Morango", "Melancia", "Carambola", "Abacate", "Mamão", "Abacaxi", "Cereja" };
             double[] Preços = { 8, 7, 7.50, 11, 23, 12, 10, 5, 17, 9 };
             for (int i = 0; i < Frutas.Length; i++)
             {
-                Console.WriteLine("O preço da " + Frutas[i] + " é " + Preços[i] + ".");
+                Console.WriteLine("O preço da " + Frutas[i] + " é " + Preços[i].ToString("C2") + ".");
             }
-          
+
+            Console.WriteLine();
+            Console.Write("O maior preço das frutas é: ");
+            Console.WriteLine(Preços.Max().ToString("C2"));
+
+            Console.Write("O menor preço das frutas é: ");
+            Console.WriteLine(Preços.Min().ToString("C2"));
+
+            double Média = Preços.Average();
+            Console.WriteLine("A Média dos preços da frutas é: " + Média);
+
+        } 
         
     }
 }
