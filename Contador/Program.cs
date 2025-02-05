@@ -22,6 +22,10 @@
         {
           Escrever($"Contagem de {início} até {fim} de {passo} em {passo}");
             Thread.Sleep(2000);
+            if (passo < 0)
+            {
+                passo *= -1;
+            }
 
             if (início < fim)
             {
